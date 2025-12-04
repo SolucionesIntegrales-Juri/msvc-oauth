@@ -64,7 +64,7 @@ public class AuthController {
                 .collect(Collectors.toList());
 
         JwtClaimsSet claims = JwtClaimsSet.builder()
-                .issuer("http://127.0.0.1:9100")
+                .issuer("http://msvc-oauth:9100")
                 .issuedAt(now)
                 .expiresAt(now.plusSeconds(expiresIn))
                 .subject(user.getUsername())
